@@ -1,5 +1,7 @@
 package teste;
 public class Program1 extends javax.swing.JFrame {
+
+    private String arg;
     //Construtor
     public Program1() {
         initComponents();
@@ -85,19 +87,26 @@ public class Program1 extends javax.swing.JFrame {
     //Quando o botão "Selecionar" é clicado
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //Cria um novo panel Program2 caso ele não exista(A janela de comandos)
+        this.arg = (String)jComboBox1.getSelectedItem();
         if(program2==null){
             program2 = new Program2();
-            program2.Str = (String)jComboBox1.getSelectedItem(); //Atribui a String selecionada ao panel Program2
+            program2.Str = this.arg; //Atribui a String selecionada ao panel Program2
             this.dispose();      //Se desfaz do panel incial Program1
             program2.setLocationRelativeTo(null); //desnecessário
             program2.setVisible(true);   //Torna Visivel o panel seguinte Program2
+            if(!program2.Str.toUpperCase().equals("SKY")){
+                program2.getButton1().setVisible(false);
+            }
             program2.setResizable(false); //desnecessário
             
         }else{
-            program2.Str = (String)jComboBox1.getSelectedItem(); //Atribui a String selecionada ao panel Program2
+            program2.Str = this.arg; //Atribui a String selecionada ao panel Program2
             this.dispose();     //Se desfaz do panel atual Program1
             program2.setLocationRelativeTo(null); // desnecessário
             program2.setVisible(true);   //Torna Visivel o panel seguinte Program2
+            if(!program2.Str.toUpperCase().equals("SKY")){
+                program2.getButton1().setVisible(false);
+            }
             program2.setResizable(false); //desnecessário
         }
     }//GEN-LAST:event_jButton1ActionPerformed

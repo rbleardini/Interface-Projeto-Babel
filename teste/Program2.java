@@ -5,7 +5,9 @@ public class Program2 extends javax.swing.JFrame {
     public Program2() {
         initComponents();
     }
-    
+    public javax.swing.JButton getButton1(){
+        return jButton1;
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -15,6 +17,7 @@ public class Program2 extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Babel Project");
@@ -40,7 +43,7 @@ public class Program2 extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setText("Sei lá");
+        jButton4.setText("Aumentar Vol.");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -54,39 +57,49 @@ public class Program2 extends javax.swing.JFrame {
             }
         });
 
+        jButton6.setText("Diminuir Vol.");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton5)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(86, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(112, 112, 112)
-                        .addComponent(jButton2)))
-                .addGap(84, 84, 84))
+                        .addComponent(jButton5)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(81, 81, 81)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(61, 61, 61)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(84, 84, 84))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(108, 108, 108)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addGap(36, 36, 36)
+                .addGap(74, 74, 74)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4)
-                    .addComponent(jButton3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                    .addComponent(jButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton3)
+                    .addComponent(jButton6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
                 .addComponent(jButton5)
                 .addContainerGap())
         );
@@ -106,10 +119,8 @@ public class Program2 extends javax.swing.JFrame {
     //Botão Liga
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //Printa o comando de acordo com a opção selecionada em panel Program1
-        if(this.Str.toUpperCase().equals("DATA-SHOW")){
+        if(this.Str.toUpperCase().equals("SKY")){
             System.out.println("Data-Show turn in String code");
-        }else{
-            System.out.println("Magic Packet - WakeMeUp");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
     //Botão Desliga
@@ -124,18 +135,30 @@ public class Program2 extends javax.swing.JFrame {
             System.out.println("Desliga Celular");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
-    //Botão Sei lá
+    //Botão Aumentar Vol.
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         //Printa o comando de acordo com a opção selecionada em panel Programa
         String s = this.Str.toUpperCase();
         if(s.equals("SKY")){
-            System.out.println("Oi, eu sou a "+s);
+            System.out.println("Volume do "+s+" aumentou!");
         }else if(s.equals("CELULAR")){
-            System.out.println("Oi, eu sou o seu "+s);
+            System.out.println("Volume do "+s+" aumentou!");
         }else{
-            System.out.println("Oi, eu sou o seu "+s);
+            System.out.println("Volume do "+s+" aumentou!");
         }
     }//GEN-LAST:event_jButton4ActionPerformed
+    //Botão Diminuir Vol.
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        //Printa o comando de acordo com a opção selecionada em panel Programa
+        String s = this.Str.toUpperCase();
+        if(s.equals("SKY")){
+            System.out.println("Volume do "+s+" diminuiu!");
+        }else if(s.equals("CELULAR")){
+            System.out.println("Volume do "+s+" diminuiu!");
+        }else{
+            System.out.println("Volume do "+s+" diminuiu!");
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
     /**
      * @param args the command line arguments
      */
@@ -166,7 +189,8 @@ public class Program2 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Program2().setVisible(true);
+                Program2 p = new Program2();
+                p.setVisible(true);
             }
         });
     }
@@ -176,5 +200,6 @@ public class Program2 extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     // End of variables declaration//GEN-END:variables
 }
